@@ -1,16 +1,13 @@
 policy:
   approval:
-    - "approved by a listed reviewer who is not a contributor"
+    - "approved by a write-permission holder"
 approval_rules:
-  - name: "approved by a listed reviewer who is not a contributor"
+  - name: "approved by a write-permission holder"
     requires:
       count: 1
-      users:
-        - "bobfortesting123-cloud"
+      permissions:
+        - write
+        - admin
     options:
-      allow_author: false
-      allow_contributor: false
-      allow_non_author_contributor: false
-      invalidate_on_push: false
       methods:
         github_review: true
