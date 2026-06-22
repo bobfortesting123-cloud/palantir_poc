@@ -9,5 +9,8 @@ approval_rules:
         - write
         - admin
     options:
+      allow_author: true
+      allow_contributor: true
+      allow_non_author_contributor: true
       methods:
         github_review: true
